@@ -894,7 +894,7 @@
     deck.can_include_card = function can_include_card(card)
     {
         // out-of-house and loyal => no
-        if(card.is_loyal)
+        if(card.faction_code !== faction_code && card.is_loyal)
             return false;
 
         // if none above => yes
