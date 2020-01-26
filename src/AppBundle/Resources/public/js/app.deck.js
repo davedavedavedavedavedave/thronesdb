@@ -778,22 +778,11 @@
     deck.get_problem = function get_problem()
     {
         var agendas = deck.get_agendas();
-        var expectedPlotDeckSize = 7;
-        var expectedMaxDoublePlot = 1;
+        var expectedPlotDeckSize = 5;
+        var expectedMaxDoublePlot = 0;
         var expectedMaxAgendaCount = 1;
-        var expectedMinCardCount = 60;
-        agendas.forEach(function (agenda) {
-            if (agenda && agenda.code === '05045') {
-                expectedPlotDeckSize = 12;
-            } else if (agenda && agenda.code === '10045') {
-                expectedPlotDeckSize = 10;
-                expectedMaxDoublePlot = 2;
-            } else if (agenda && ['13118', '16028'].indexOf(agenda.code) > -1) {
-                expectedMinCardCount = 75;
-            } else if (agenda && agenda.code === '16030') {
-                expectedMinCardCount = 100;
-            }
-        });
+        var expectedMinCardCount = 40;
+        
         // exactly 7 plots
         if (deck.get_plot_deck_size() > expectedPlotDeckSize) {
             return 'too_many_plots';
