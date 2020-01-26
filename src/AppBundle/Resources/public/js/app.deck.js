@@ -1024,28 +1024,12 @@
      */
     deck.can_include_card = function can_include_card(card)
     {
-        // neutral card => yes
-        if(card.faction_code === 'neutral')
-            return true;
-
-        // in-house card => yes
-        if(card.faction_code === faction_code)
-            return true;
-
         // out-of-house and loyal => no
         if(card.is_loyal)
             return false;
 
-        // agenda => yes
-        var agendas = deck.get_agendas();
-        for(var i = 0; i < agendas.length; i++) {
-            if(deck.card_allowed_by_agenda(agendas[i], card)) {
-                return true;
-            }
-        }
-
-        // if none above => no
-        return false;
+        // if none above => yes
+        return true;
     };
 
     /**
