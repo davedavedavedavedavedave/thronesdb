@@ -85,15 +85,15 @@
 	font-size: 14px;
 	content: "D͡͏ǪO͘M͘È͜D҉͠͞";
 }
-.card-text:nth-child(2) .icon-doomed:before {
+.card-text p:nth-child(2) .icon-doomed:before {
 	content: "D͢O̧҉Ò҉̵M͞E͝D̶͜";
 }
-.card-text:nth-child(3) .icon-doomed:before {
+.card-text p:nth-child(3) .icon-doomed:before {
 	content: "D̶͞҉Ơ̶Ơ̴͠M̸͠E̷D̶͞͝͡";
 }
-.card-text:nth-child(4) .icon-doomed:before {
+.card-text p:nth-child(4) .icon-doomed:before {
 	content: "D͏͡O̧Ơ͟M̴̧̀E̴̢͢D͝͞";
 }
-.card-text:nth-child(5) .icon-doomed:before {
+.card-text p:nth-child(5) .icon-doomed:before {
 	content: "DOO̵ME̶D͟";
 }
