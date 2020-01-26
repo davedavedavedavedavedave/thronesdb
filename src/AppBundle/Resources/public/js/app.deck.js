@@ -1037,23 +1037,7 @@
      * @memberOfdeck
      */
     deck.card_allowed_by_agenda = function card_allowed_by_agenda(agenda, card) {
-        switch(agenda.code) {
-            case '01198':
-            case '01199':
-            case '01200':
-            case '01201':
-            case '01202':
-            case '01203':
-            case '01204':
-            case '01205':
-                return card.faction_code === deck.get_minor_faction_code(agenda);
-            case '09045':
-                return card.type_code === 'character' && card.traits.indexOf(Translator.trans('card.traits.maester')) !== -1;
-            case '13079':
-                return card.type_code === 'character' && card_has_shadow_keyword(card, Translator.trans('card.keywords.shadow'));
-            case '13099':
-                return card.type_code === 'character' && card.traits.indexOf(Translator.trans('card.traits.kingsguard')) !== -1;
-        }
+        return true;
     };
 
     /**
