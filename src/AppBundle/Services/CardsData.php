@@ -57,6 +57,7 @@ class CardsData
             '[targaryen]' => '<span class="icon-targaryen"></span>',
             '[tyrell]' => '<span class="icon-tyrell"></span>',
             '[unique]' => '<span class="icon-unique"></span>',
+            '[doomed]' => '<span class="icon-doomed"></span>',
         ];
 
         return str_replace(array_keys($displayTextReplacements), array_values($displayTextReplacements), $text);
