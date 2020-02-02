@@ -41,6 +41,15 @@
     /**
      * @memberOf format
      */
+    format.illustrator = function pack(card)
+    {
+        var text = card.illustrator;
+        return text;
+    }
+
+    /**
+     * @memberOf format
+     */
     format.info = function info(card)
     {
         var text = '<span class="card-type">' + card.type_name + '. </span>';
